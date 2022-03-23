@@ -28,7 +28,7 @@ export class AuthService {
 
   login({ email, password }: any): Observable<any> {
     if (email === 'admin@gmail.com' && password === 'pass@123') {
-      this.setToken('abcdefghijklmnopqrstuvwxyz');
+      this.setToken('static_token');
       return of({ password: 'pass@123', email: 'admin@gmail.com' });
     }
     return throwError(Error('Failed to login'));
